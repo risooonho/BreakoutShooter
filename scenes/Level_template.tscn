@@ -1,0 +1,5 @@
+[gd_scene format=2]
+
+[node name="Level" type="TileMap"]
+cell_tile_origin = 1
+format = 1

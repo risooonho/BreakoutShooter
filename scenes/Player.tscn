@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://skripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Bullet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/robot1_machine.png" type="Texture" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 9.83469
+height = 23.4814
+
+[node name="Player" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 9
+script = ExtResource( 1 )
+bullet = ExtResource( 2 )
+
+[node name="robot1_machine" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -9.83542, 0 )
+shape = SubResource( 1 )
+
+[node name="bullet_spawn" type="Position2D" parent="."]
+position = Vector2( 28.5842, 9.52805 )
